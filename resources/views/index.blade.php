@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Page principale')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
 </head>
 <body class="vh-100">
-    <header class="d-flex justify-content-between mx-3 my-1 border-bottom border-dark">
+    <header class="d-flex justify-content-between border-bottom border-dark">
         <!-- Logo -->
         <a href="/"><img src="/images/logoAbi-sansFond.png" class="w-50" alt=""></a>
         <!-- Menu navigation -->
@@ -31,10 +32,10 @@
             <div id="error-message" class="error"></div>
         </div>
     </header>
-    <div class="container mt-4">
+    <main class="container mt-3 rounded-2 h-75">
         @yield('content')
-    </div>
-    <footer class="text-center mt-3">
+    </main>
+    <footer class="text-center mt-3 position-absolute w-100 d-flex align-items-center">
         <p>&copy; 2024 ABI Gestion Commerciale. Tous droits réservés.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

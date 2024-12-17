@@ -3,7 +3,7 @@
 @section('title', 'Liste clients')
 
 @section('content')
-    <main>
+    <div>
         <h1 class="text-center">Listes des clients</h1>
             <table class="table table-striped table table-bordered">
                 <thead>
@@ -48,5 +48,5 @@
                     </tr>
                 </tfoot>
             </table>
-    </main>
+    </div>
 @endsection

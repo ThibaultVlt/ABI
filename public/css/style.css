@@ -1,0 +1,15 @@
+body {
+    background: #e64f46;
+}
+
+header, footer {
+    background: #71a3c1;
+}
+
+.container {
+    background: #75ba75;
+}
+
+footer {
+    bottom: 0;
+}
