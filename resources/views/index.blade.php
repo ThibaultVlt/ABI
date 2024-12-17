@@ -23,13 +23,13 @@
         <!-- Endroit pour la connexion -->
         <div class="login d-flex flex-column justify-content-center">
         <h2 class="fs-5 text-center">Connexion</h2>
-            <form id="loginForm" class="d-flex flex-column">
+            <form id="connexion" class="d-flex flex-column">
                 <!-- Identifiants -->
-                <input type="text" id="username" name="username" placeholder="Nom d'utilisateur" required>
-                <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+                <input type="text" id="nomUtilisateur" name="nom utilisateur" placeholder="Nom d'utilisateur" required>
+                <input type="password" id="mdp" name="mot de passe" placeholder="Mot de passe" required>
                 <button type="submit">Se connecter</button>
             </form>
-            <div id="error-message" class="error"></div>
+            <div id="msg-erreur" class="erreur"></div>
         </div>
     </header>
     <main class="container mt-3 rounded-2 h-75">
@@ -39,5 +39,6 @@
         <p>&copy; 2024 ABI Gestion Commerciale. Tous droits réservés.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>
