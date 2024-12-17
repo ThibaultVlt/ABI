@@ -16,8 +16,14 @@ use Illuminate\Support\Facades\Route;
 
 //Route de la page Accueil
 Route::get('/', function () {
-    return view('index');
+    return view('accueil');
 });
 
 //Route de la page Clients
 Route::get('clients', [\App\Http\Controllers\ClientsController::class, 'clients']);
+
+//Route de la page Contacts
+Route::get('contacts', [\App\Http\Controllers\ContactsController::class, 'contacts']);
+
+//Route de la page Projets
+Route::get('projets', [\App\Http\Controllers\ProjetsController::class, 'projets']);

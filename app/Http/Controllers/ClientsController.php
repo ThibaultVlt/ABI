@@ -11,7 +11,6 @@ class ClientsController extends Controller
     {
         return view('clients', [
             'clients' => Clients::all()
-            // 'clients' => []
         ]);
     }
 }
