@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,11 +20,4 @@ Route::get('/', function () {
 });
 
 //Route de la page Clients
-Route::get('clients', function () {
-    return view('clients');
-});
-
-//Route de la page Projets
-Route::get('pojets', function () {
-    return view('projets');
-});
+Route::get('clients', [\App\Http\Controllers\ClientsController::class, 'clients']);
