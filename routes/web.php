@@ -20,7 +20,10 @@ Route::get('/', function () {
 });
 
 //Route de la page Clients
-Route::get('clients', [\App\Http\Controllers\ClientsController::class, 'clients']);
+Route::get('clients', [\App\Http\Controllers\ClientsController::class, 'clients'])->name('clients');
+Route::get('clients/creer', [\App\Http\Controllers\ClientsController::class, 'creer'])->name('client.creer');
+Route::post('clients/enregistrer', [\App\Http\Controllers\ClientsController::class, 'enregistrer'])->name('client.enregistrer');
+Route::get('clients/{id}', [\App\Http\Controllers\ClientsController::class, 'details'])->name('client.details');
 
 //Route de la page Contacts
 Route::get('contacts', [\App\Http\Controllers\ContactsController::class, 'contacts']);

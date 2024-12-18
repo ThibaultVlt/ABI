@@ -15,7 +15,6 @@
                     <th scope="col" class="text-center">Téléphone</th>
                     <th scope="col" class="text-center">Email</th>
                     <th scope="col" class="text-center">Durée</th>
-                    <th scope="col" class="text-center">Modif / Suppr</th>
                 </thead>
                 <?php
                     foreach($contacts as $contact){
@@ -28,17 +27,12 @@
                         echo "<td class='text-center'> $contact[telContact] </td>";
                         echo "<td class='text-center'> $contact[emailContact] </td>";
                         echo "<td class='text-center'> $contact[duree] </td>";
-                        echo "<td class='text-center'>
-                        <a href='index.php?action=suppr&id=$contact[idClient]' class='text-dark'>Modifier</a> |
-                        <a href='index.php?action=form_modif&id=$contact[idClient]' class='text-dark'>Supprimer</a>
-                        </td>"; //TODO Faire les lien pour modifier et supprimer
                         echo "</tr>";
                     }
                 ?>
                 <tfoot>
                     <tr scope="row">
-                        <!-- TODO Faire le page d'ajout -->
-                        <td colspan="12" class="text-center"><a href="" class="text-dark">Ajouter un client</a></td>
+                        <td colspan="12" class="text-center"><a href="" class="text-dark">Ajouter un contact</a></td>
                     </tr>
                 </tfoot>
             </table>

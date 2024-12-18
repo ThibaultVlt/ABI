@@ -30,7 +30,7 @@
                 <tfoot>
                     <tr scope="row">
                         <!-- TODO Faire le page d'ajout -->
-                        <td colspan="12" class="text-center"><a href="" class="text-dark">Ajouter un client</a></td>
+                        <td colspan="12" class="text-center"><a href="" class="text-dark">Ajouter un projet</a></td>
                     </tr>
                 </tfoot>
             </table>

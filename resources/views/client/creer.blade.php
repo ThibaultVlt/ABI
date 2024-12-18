@@ -20,57 +20,27 @@
         <!-- Formulaire d'ajout de client -->
         <form action="{{ route('client.enregistrer') }}" method="POST">
             @csrf
-            <div class="form-group">
-                <label for="raisonSociale">Raison sociale</label>
-                <input type="text" class="form-control" id="raisonSociale" name="raisonSociale" value="{{ old('raisonSociale') }}" required>
+            <div class="form-group d-flex flex-column align-items-center gap-2">
+                <input type="text" class="form-control w-75" id="raisonSociale" name="raisonSociale" placeholder="Raison sociale" value="{{ old('raisonSociale') }}" required>
+                <input type="text" class="form-control w-75" id="adresseClient" name="adresseClient" placeholder="Adresse" value="{{ old('adresseClient') }}" required>
+                <input type="text" class="form-control w-75" id="codePostalClient" name="codePostalClient" placeholder="Code Postal" value="{{ old('codePostalClient') }}" required>
+
+                <input type="text" class="form-control w-75" id="villeClient" name="villeClient" placeholder="Ville" value="{{ old('villeClient') }}" required>
+
+                <input type="number" class="form-control w-75" id="CA" name="CA" placeholder="Chiffre d'affaires" value="{{ old('CA') }}" required>
+
+                <input type="number" class="form-control w-75" id="effectif" name="effectif" placeholder="Effectif" value="{{ old('effectif') }}" required>
+
+                <input type="text" class="form-control w-75" id="telephoneClient" name="telephoneClient" placeholder="Téléphone" value="{{ old('telephoneClient') }}" required>
+
+                <input type="text" class="form-control w-75" id="typeClient" name="typeClient" placeholder="Type" value="{{ old('typeClient') }}">
+
+                <input type="text" class="form-control w-75" id="natureClient" name="natureClient" placeholder="Nature" value="{{ old('natureClient') }}">
+
+                <textarea class="form-control w-75" id="commentaireClient" placeholder="Commentaire" name="commentaireClient">{{ old('commentaireClient') }}</textarea>
+                <button type="submit" class="btn btn-primary mt-2">Ajouter le client</button>
             </div>
 
-            <div class="form-group">
-                <label for="adresseClient">Adresse</label>
-                <input type="text" class="form-control" id="adresseClient" name="adresseClient" value="{{ old('adresseClient') }}" required>
-            </div>
-
-            <div class="form-group">
-                <label for="codePostalClient">Code Postal</label>
-                <input type="text" class="form-control" id="codePostalClient" name="codePostalClient" value="{{ old('codePostalClient') }}" required>
-            </div>
-
-            <div class="form-group">
-                <label for="villeClient">Ville</label>
-                <input type="text" class="form-control" id="villeClient" name="villeClient" value="{{ old('villeClient') }}" required>
-            </div>
-
-            <div class="form-group">
-                <label for="CA">Chiffre d'affaires</label>
-                <input type="number" class="form-control" id="CA" name="CA" value="{{ old('CA') }}" required>
-            </div>
-
-            <div class="form-group">
-                <label for="effectif">Effectif</label>
-                <input type="number" class="form-control" id="effectif" name="effectif" value="{{ old('effectif') }}" required>
-            </div>
-
-            <div class="form-group">
-                <label for="telephoneClient">Téléphone</label>
-                <input type="text" class="form-control" id="telephoneClient" name="telephoneClient" value="{{ old('telephoneClient') }}" required>
-            </div>
-
-            <div class="form-group">
-                <label for="typeClient">Type</label>
-                <input type="text" class="form-control" id="typeClient" name="typeClient" value="{{ old('typeClient') }}" required>
-            </div>
-
-            <div class="form-group">
-                <label for="natureClient">Nature</label>
-                <input type="text" class="form-control" id="natureClient" name="natureClient" value="{{ old('natureClient') }}" required>
-            </div>
-
-            <div class="form-group">
-                <label for="commentaireClient">Commentaire</label>
-                <textarea class="form-control" id="commentaireClient" name="commentaireClient">{{ old('commentaireClient') }}</textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Ajouter le client</button>
         </form>
     </div>
 @endsection
