@@ -10,7 +10,7 @@
 <body class="vh-100">
     <header class="d-flex justify-content-between border-bottom border-dark">
         <!-- Logo -->
-        <a href="/"><img src="/images/logoAbi-sansFond.png" class="w-50" alt=""></a>
+        <a href="/"><img src="/images/logoAbi-sansFond.png" class="w-50 ms-2" alt=""></a>
         <!-- Menu navigation -->
         <nav class="d-flex align-items-center">
             <ul class="list-unstyled d-flex gap-5">
@@ -21,7 +21,7 @@
             </ul>
         </nav>
         <!-- Endroit pour la connexion -->
-        <div class="login d-flex flex-column justify-content-center">
+        <div class="login d-flex flex-column justify-content-center me-3">
         <h2 class="fs-5 text-center">Connexion</h2>
             <form id="connexion" class="d-flex flex-column">
                 <!-- Identifiants -->
@@ -35,8 +35,8 @@
     <main class="container mt-3 rounded-2 h-75">
         @yield('content')
     </main>
-    <footer class="text-center mt-3 position-absolute w-100 d-flex align-items-center">
-        <p>&copy; 2024 ABI Gestion Commerciale. Tous droits réservés.</p>
+    <footer class="position-absolute w-100 d-flex align-items-center">
+        <p class="text-center">&copy; 2024 ABI Gestion Commerciale. Tous droits réservés.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="{{ asset('js/main.js') }}"></script>

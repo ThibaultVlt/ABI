@@ -30,3 +30,6 @@ Route::get('contacts', [\App\Http\Controllers\ContactsController::class, 'contac
 
 //Route de la page Projets
 Route::get('projets', [\App\Http\Controllers\ProjetsController::class, 'projets']);
+
+//Route de la page Table
+Route::get('tables', [\App\Http\Controllers\TablesController::class, 'tables'])->name('tables');

@@ -3,9 +3,9 @@
 @section('title', 'Fiche client')
 
 @section('content')
-    <h1>Fiche du client : {{ $client->raisonSociale }}</h1>
+    <h1 class="text-center">Fiche client : {{ $client->raisonSociale }}</h1>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered w-50 mx-auto">
         <tr>
             <th>Raison sociale</th>
             <td>{{ $client->raisonSociale }}</td>
@@ -47,6 +47,7 @@
             <td>{{ $client->commentaireClient }}</td>
         </tr>
     </table>
-
-    <a href="{{ route('clients') }}" class="btn btn-secondary">Retour à la liste des clients</a>
+    <div class="d-flex justify-content-center">
+        <a href="{{ route('clients') }}" class="btn btn-secondary">Retour à la liste des clients</a>
+    </div>
 @endsection

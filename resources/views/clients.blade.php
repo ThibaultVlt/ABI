@@ -1,32 +1,23 @@
-@extends('index')
+@extends('tables')
 
-@section('title', 'Liste clients')
+@section('tableau')
 
-@section('content')
-@if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
-
-<div>
-    <h1 class="text-center">Liste des clients</h1>
-    <table class="table table-striped table-bordered">
-        <thead>
-            <th scope="col">ID Client</th>
-            <th scope="col">Raison sociale</th>
-            <th scope="col">Adresse</th>
-            <th scope="col">Code postal</th>
-            <th scope="col">Ville</th>
-            <th scope="col">CA</th>
-            <th scope="col">Effectif</th>
-            <th scope="col">Téléphone</th>
-            <th scope="col">Type</th>
-            <th scope="col">Nature</th>
-            <th scope="col">Commentaire</th>
-            <th scope="col">Actions</th> <!-- Ajouté une colonne pour l'action -->
-        </thead>
-        <tbody>
+    @section('h1', 'Liste des clients')
+        @section('thead')
+            <th scope="col" class="text-center">ID Client</th>
+            <th scope="col" class="text-center">Raison sociale</th>
+            <th scope="col" class="text-center">Adresse</th>
+            <th scope="col" class="text-center">Code postal</th>
+            <th scope="col" class="text-center">Ville</th>
+            <th scope="col" class="text-center">CA</th>
+            <th scope="col" class="text-center">Effectif</th>
+            <th scope="col" class="text-center">Téléphone</th>
+            <th scope="col" class="text-center">Type</th>
+            <th scope="col" class="text-center">Nature</th>
+            <th scope="col" class="text-center">Commentaire</th>
+            <th scope="col" class="text-center">Fiche</th>
+        @endsection
+            @section('tbody')
             @foreach($clients as $client)
                 <tr scope="row">
                     <td>{{ $client->idClient }}</td>
@@ -43,14 +34,12 @@
                     <td class="text-center">
                         <a href="{{ route('client.details', $client->idClient) }}" class="text-black">Voir la fiche</a>
                     </td>
-                </tr>
             @endforeach
-        </tbody>
-        <tfoot>
+        @endsection
+        @section('tfoot')
             <tr scope="row">
                 <td colspan="12" class="text-center"><a href="{{ route('client.creer')}}" class="text-dark">Ajouter un client</a></td>
             </tr>
-        </tfoot>
-    </table>
+        @endsection
 </div>
 @endsection
