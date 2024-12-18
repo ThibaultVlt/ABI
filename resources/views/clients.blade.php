@@ -23,20 +23,20 @@
                 <?php
                     foreach($clients as $client){
                         echo "<tr scope='row'>";
-                        echo "<td> $client[idClient] </td>";
-                        echo "<td> $client[raisonSociale] </td>";
-                        echo "<td> $client[adresseClient] </td>";
-                        echo "<td> $client[codePostalClient] </td>";
-                        echo "<td> $client[villeClient] </td>";
-                        echo "<td> $client[CA] </td>";
-                        echo "<td> $client[effectif] </td>";
-                        echo "<td> $client[telephoneClient] </td>";
-                        echo "<td> $client[typeClient] </td>";
-                        echo "<td> $client[natureClient] </td>";
-                        echo "<td> $client[commentaireClient] </td>";
+                        echo "<td> {{ $client->idClient }} </td>";
+                        echo "<td> {{ $client->raisonSociale }} </td>";
+                        echo "<td> {{ $client->adresseClient }} </td>";
+                        echo "<td> {{ $client->codePostalClient }} </td>";
+                        echo "<td> {{ $client->villeClient }} </td>";
+                        echo "<td> {{ $client->CA }} </td>";
+                        echo "<td> {{ $client->effectif }} </td>";
+                        echo "<td> {{ $client->telephoneClient }} </td>";
+                        echo "<td> {{ $client->typeClient }} </td>";
+                        echo "<td> {{ $client->natureClient }} </td>";
+                        echo "<td> {{ $client->commentaireClient }} </td>";
                         echo "<td class='text-center'>
-                        <a href='index.php?action=suppr&id=$client[idClient]' class='text-dark'>Modifier</a> |
-                        <a href='index.php?action=form_modif&id=$client[idClient]' class='text-dark'>Supprimer</a>
+                        <a href='/ajout/{{ $client->idClient }}' class='text-dark'>Modifier</a> |
+                        <a href='index.php?action=form_modif&id=$client->idClient]' class='text-dark'>Supprimer</a>
                         </td>"; //TODO Faire les lien pour modifier et supprimer les clients de la liste
                         echo "</tr>";
                     }
