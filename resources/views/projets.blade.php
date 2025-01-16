@@ -21,7 +21,7 @@
         @endsection
         @section('tfoot')
             <tr scope="row">
-                <td colspan="12" class="text-center"><a href="{{ route('client.creer')}}" class="text-dark">Ajouter un projet</a></td>
+                <td colspan="12" class="text-center"><a href="/" class="text-dark">Ajouter un projet</a></td>
             </tr>
         @endsection
 </div>

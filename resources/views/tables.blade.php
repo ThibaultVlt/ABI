@@ -1,6 +1,6 @@
 @extends('index')
 
-@section('title', 'Liste clients')
+@section('title', 'Liste suivi')
 
 @section('content')
 @if(session('success'))

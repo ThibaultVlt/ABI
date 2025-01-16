@@ -29,7 +29,7 @@
         @endsection
         @section('tfoot')
             <tr scope="row">
-                <td colspan="12" class="text-center"><a href="" class="text-dark">Ajouter un contact</a></td>
+                <td colspan="12" class="text-center"><a href="/" class="text-dark">Ajouter un contact</a></td>
             </tr>
         @endsection
     </div>
